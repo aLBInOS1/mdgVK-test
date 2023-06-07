@@ -55,17 +55,15 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/mdgVK-TEST.loader.js";
+      var loaderUrl = buildUrl + "/mdgVK.loader.js";
       var config = {
-        dataUrl: buildUrl + "/mdgVK-TEST.data.unityweb",
-        frameworkUrl: buildUrl + "/mdgVK-TEST.framework.js.unityweb",
-        codeUrl: buildUrl + "/mdgVK-TEST.wasm.unityweb",
+        dataUrl: "Build/mdgVK-TEST.data",
+        frameworkUrl: "Build/mdgVK-TEST.framework.js",
+        codeUrl: "Build/mdgVK-TEST.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "NGame",
         productName: "mobileSurvival",
         productVersion: "1.4",
-        showBanner: unityShowBanner,
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -80,7 +78,6 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1.4;
-        //unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "100%";
         canvas.style.height = "100%";
